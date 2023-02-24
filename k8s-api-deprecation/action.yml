@@ -12,7 +12,7 @@ runs:
   steps:
     - run: |
         # Helm 3 installation
-        sh -c "$(curl -sSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3)" >/dev/null
+        curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash >/dev/null
       shell: bash
     - run: |
         # Kubent installation
