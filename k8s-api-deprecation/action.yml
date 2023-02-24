@@ -20,7 +20,7 @@ runs:
       shell: bash
     - run: |
         # Generate chart template and check apis using kubent
-        helm template ${{ inputs.chartName }} | kubent --helm3=false --cluster=false --filename=- 
+        helm template ${{ inputs.chartName }} | /usr/local/bin/kubent --helm3=false --cluster=false --filename=- 
       shell: bash
 
 branding:
