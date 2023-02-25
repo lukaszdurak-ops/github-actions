@@ -12,11 +12,11 @@ runs:
   steps:
     - run: |
         # Helm 3 installation
-        bash -c "$(curl -sSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3)"
+        bash -c "$(curl -sSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3)" >/dev/null
       shell: bash
     - run: |
         # Kubent installation
-        bash -c "$(curl -sSL https://git.io/install-kubent)" >/dev/null
+        bash -c "$(curl -sSL https://git.io/install-kubent)"
       shell: bash
     - run: |
         # Generate chart template and check apis using kubent
