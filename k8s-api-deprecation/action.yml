@@ -23,6 +23,10 @@ runs:
         # Generate chart template and check apis using kubent
         helm template ${{ inputs.chartName }} | kubent --helm3=false --cluster=false --filename=- 
       shell: bash
+    - run: |
+        # Generate chart template and check apis using kubent
+        helm template ${{ inputs.chartName }} | kubent --helm3=false --cluster=false --filename=- 
+      shell: bash
 
 branding:
   icon: file-text
